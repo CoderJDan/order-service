@@ -1,0 +1,5 @@
+FROM openjdk:17-alpine
+
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} basic_test.jar
+ENTRYPOINT ["java","-jar","/basic_test.jar"]

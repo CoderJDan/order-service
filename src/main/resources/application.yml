@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://172.20.0.4:3306/msa?serverTimezone=Asia/Seoul
+    #    url: jdbc:mysql://172.17.0.2:3306/msa?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://127.0.0.1:3306/msa?serverTimezone=Asia/Seoul
+    username: mytest
+    password: 1234
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+#      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+
+server:
+  port: 9200
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+##      defaultZone: http://172.20.0.2:8761/eureka
+#      defaultZone: http://127.0.0.1:8761/eureka
