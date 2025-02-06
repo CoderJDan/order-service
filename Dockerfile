@@ -17,6 +17,9 @@ RUN chmod +x gradlew
 # gradle 종속성을 다운로드
 RUN ./gradlew dependencies --no-daemon
 
+# 소스코드 복사
+COPY src /myapp/src
+
 # 이전 빌드에서 생성된 모든 build/ 디렉토리 내용을 삭제, 새롭게 빌드
 # 프로젝트를 빌드
 # --no-daemon 은 데몬을 이용하지 않고 빌드
