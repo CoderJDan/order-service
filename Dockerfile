@@ -7,18 +7,18 @@ WORKDIR /myapp
 COPY . /myapp
 
 # gradle 종속성을 먼저 복사해서 캐싱
-COPY gradle /myapp/gradle
-COPY gradlew /myapp/
-COPY build.gradle settings.gradle /myapp/
+#COPY gradle /myapp/gradle
+#COPY gradlew /myapp/
+#COPY build.gradle settings.gradle /myapp/
 
 # gradlew 를 실행할 수 있는 권한을 추가
 RUN chmod +x gradlew
 
 # gradle 종속성을 다운로드
-RUN ./gradlew dependencies --no-daemon
+#RUN ./gradlew dependencies --no-daemon
 
 # 소스코드 복사
-COPY src /myapp/src
+#COPY src /myapp/src
 
 # 이전 빌드에서 생성된 모든 build/ 디렉토리 내용을 삭제, 새롭게 빌드
 # 프로젝트를 빌드
