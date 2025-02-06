@@ -12,6 +12,7 @@ COPY . /myapp
 # gradle 은 설치되어 있는 gradle 을 이용해서 빌드, gradlew 는 프로젝트에 포함된 gradle 을 이용
 # CICD 에서는 gradlew 를 이용해서 작업
 # -x test 는 test 를 제외하고 작업
+# gradlew 를 실행할 수 있는 권한을 추가
 RUN chmod +x gradlew
 RUN gradlew clean build --no-daemon -x test
 
