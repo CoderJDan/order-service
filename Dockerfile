@@ -14,7 +14,7 @@ COPY . /myapp
 # -x test 는 test 를 제외하고 작업
 # gradlew 를 실행할 수 있는 권한을 추가
 RUN chmod +x gradlew
-RUN gradlew clean build --no-daemon -x test
+RUN ./gradlew clean build --no-daemon -x test
 
 # 자바를 실행하기 위한 작업
 FROM openjdk:17-alpine
